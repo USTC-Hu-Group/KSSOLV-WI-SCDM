@@ -1,0 +1,62 @@
+{
+  "case_name": "soc_aumn",
+  "system": "AuMn",
+  "source_folder": ".",
+  "source_file": "structure.xsf",
+  "natoms": 2,
+  "structure_sha256": "660f67ad981fa597c0f79cea16d3d18f60605a28d9b2f3759f15d0b6bb328399",
+  "rationale": "Au 5d plus a Mn spin-polarized SOC trial, initially along z.",
+  "nspin": 4,
+  "lspinorb": true,
+  "noncolin": true,
+  "domag": 1,
+  "initial_moments": {
+    "Mn": [
+      3.0,
+      0,
+      0
+    ]
+  },
+  "pseudopotentials": {
+    "Au": {
+      "filename": "Au_ONCV_PBE_FR-1.3.upf",
+      "z_valence": 19.0,
+      "spatial_pao": 18,
+      "sha256": "545cb90757ba33d7ae446e07f601ff3cecc88c3d8c01b5af43db35da68bc7250"
+    },
+    "Mn": {
+      "filename": "Mn_ONCV_PBE_FR-1.3.upf",
+      "z_valence": 15.0,
+      "spatial_pao": 18,
+      "sha256": "6238f8d39884e0c27d412b80b9ccf84c4bd45154965100498daf03d12995e1ab"
+    }
+  },
+  "pseudo_subdir": "default_FR",
+  "valence_electrons": 34.0,
+  "estimated_num_wann_from_pao": 72,
+  "nbnd_scf": 42,
+  "nbnd_nscf": 90,
+  "scf_kgrid": [
+    4,
+    4,
+    4
+  ],
+  "nscf_kgrid": [
+    6,
+    6,
+    6
+  ],
+  "ecut_hartree": 40,
+  "temperature_kelvin": 300,
+  "band_error_mode": "entangled",
+  "metric_definition": "vitale2020-v1",
+  "nu_eV": 1.0,
+  "tau_eV": 0.1,
+  "estimated_fft_grid": [
+    33,
+    33,
+    33
+  ],
+  "estimated_unk_gib": 46.85,
+  "source_note": "Packaged copy of the original AuMn XSF input; structure SHA-256 is unchanged."
+}
