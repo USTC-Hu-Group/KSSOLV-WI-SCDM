@@ -1,0 +1,366 @@
+{
+  "date": "2026-10-15",
+  "status": "passed documented integration checks; public rights clearance pending",
+  "environment": "9.14.0.2206163 (R2023a)",
+  "startup": {
+    "standard_entry": "KSSOLV_startup",
+    "standalone_setup_present": false,
+    "external_root_environment_cleared": true,
+    "resolved_custom_code_inside_branch": true,
+    "fixtures_on_startup_path": false
+  },
+  "analytic": {
+    "kind": "synthetic software demonstration",
+    "matlab_version": "9.14.0.2206163 (R2023a)",
+    "records": [
+      {
+        "mode": "scalar",
+        "orthogonality_error": 1.2517733831462686e-15,
+        "node_error_wi_scdm_eV": 1.1302070390684094e-13,
+        "node_error_wi_scdm_f_eV": 1.1246559239452836e-13
+      },
+      {
+        "mode": "spinor",
+        "orthogonality_error": 9.937891504146011e-16,
+        "node_error_wi_scdm_eV": 1.1224354778960333e-13,
+        "node_error_wi_scdm_f_eV": 1.1246559239452836e-13
+      }
+    ]
+  },
+  "tests": {
+    "matlab_version": "9.14.0.2206163 (R2023a)",
+    "passed": [
+      "test_scdm_shifted_kgrid",
+      "test_calculate_band_error_modes",
+      "test_calculate_err_trims_reference_bands",
+      "test_vitale_error_pipeline",
+      "test_vitale_error_summary",
+      "test_scdm_provenance",
+      "audit_wi_scdm_f_inverse",
+      "test_write_w90_mmn_from_unk (3 tests)",
+      "test_scdm_fit_policy",
+      "test_compute_pao_projectability_ppvar_funct"
+    ],
+    "skipped": []
+  },
+  "material_preflights": [
+    {
+      "mode": "si",
+      "matlab": "9.14.0.2206163 (R2023a)",
+      "startup": "passed",
+      "external_dependency_root_required": false,
+      "scf_kpoints": 216,
+      "pao_count": 8,
+      "scf_executed": false,
+      "nscf_executed": false,
+      "status": "passed"
+    },
+    {
+      "mode": "soc",
+      "matlab": "9.14.0.2206163 (R2023a)",
+      "startup": "passed",
+      "external_dependency_root_required": false,
+      "scf_kpoints": 64,
+      "pao_count": 72,
+      "scf_executed": false,
+      "nscf_executed": false,
+      "status": "passed"
+    }
+  ],
+  "checkcode": {
+    "files": 58,
+    "parse_errors": 0,
+    "nonfatal_messages": [
+      {
+        "file": "src/WI/compare_scdm_bands.m",
+        "line": 197,
+        "id": "STCI"
+      },
+      {
+        "file": "src/WI/run_wannier90.m",
+        "line": 347,
+        "id": "NASGU"
+      },
+      {
+        "file": "tests/wi/test_scdm_fit_policy.m",
+        "line": 10,
+        "id": "GVMIS"
+      },
+      {
+        "file": "tests/wi/test_scdm_fit_policy.m",
+        "line": 68,
+        "id": "NASGU"
+      },
+      {
+        "file": "tests/wi/test_scdm_shifted_kgrid.m",
+        "line": 42,
+        "id": "NASGU"
+      },
+      {
+        "file": "tests/wi/test_scdm_shifted_kgrid.m",
+        "line": 48,
+        "id": "NASGU"
+      },
+      {
+        "file": "tests/wi/test_scdm_shifted_kgrid.m",
+        "line": 51,
+        "id": "USENS"
+      },
+      {
+        "file": "tests/wi/test_scdm_shifted_kgrid.m",
+        "line": 91,
+        "id": "MSNU"
+      },
+      {
+        "file": "tests/wi/fixtures/fit_policy_pao/compute_pao_projectability.m",
+        "line": 3,
+        "id": "GVMIS"
+      },
+      {
+        "file": "tests/wi/fixtures/fit_policy_solver/lsqcurvefit.m",
+        "line": 3,
+        "id": "GVMIS"
+      },
+      {
+        "file": "run_wi_example.m",
+        "line": 20,
+        "id": "FVAL"
+      },
+      {
+        "file": "KSSOLV_startup.m",
+        "line": 29,
+        "id": "NASGU"
+      },
+      {
+        "file": "util/outpwscf.m",
+        "line": 17,
+        "id": "AGROW"
+      },
+      {
+        "file": "util/outpwscf.m",
+        "line": 18,
+        "id": "NOSEMI"
+      },
+      {
+        "file": "util/outpwscf.m",
+        "line": 63,
+        "id": "NOSEMI"
+      },
+      {
+        "file": "util/outpwscf.m",
+        "line": 73,
+        "id": "NOSEMI"
+      },
+      {
+        "file": "util/outpwscf.m",
+        "line": 81,
+        "id": "NOSEMI"
+      }
+    ]
+  },
+  "static_dependency_closure": {
+    "files": [
+      "src/BasisClass/@BlochHam/BlochHam.m",
+      "src/BasisClass/@BlochHam/ncols.m",
+      "src/BasisClass/@BlochHam/subsref.m",
+      "src/BasisClass/@BlochWavefun/BlochWavefun.m",
+      "src/BasisClass/@BlochWavefun/assignoccs.m",
+      "src/BasisClass/@BlochWavefun/ncols.m",
+      "src/BasisClass/@BlochWavefun/subsasgn.m",
+      "src/BasisClass/@BlochWavefun/subsref.m",
+      "src/BasisClass/@Ggrid/Ggrid.m",
+      "src/BasisClass/@Ggrid/display.m",
+      "src/BasisClass/@Ggrid/get.m",
+      "src/BasisClass/@Ham/Ham.m",
+      "src/BasisClass/@Ham/applyKIEP.m",
+      "src/BasisClass/@Ham/applyNP.m",
+      "src/BasisClass/@Ham/mldivide.m",
+      "src/BasisClass/@Ham/mtimes.m",
+      "src/BasisClass/@Ham/solve.m",
+      "src/BasisClass/@Ham/updateV.m",
+      "src/BasisClass/@Wavefun/Wavefun.m",
+      "src/BasisClass/@Wavefun/abs.m",
+      "src/BasisClass/@Wavefun/bsxfun.m",
+      "src/BasisClass/@Wavefun/compress.m",
+      "src/BasisClass/@Wavefun/conj.m",
+      "src/BasisClass/@Wavefun/ctranspose.m",
+      "src/BasisClass/@Wavefun/fft3.m",
+      "src/BasisClass/@Wavefun/horzcat.m",
+      "src/BasisClass/@Wavefun/ifft3.m",
+      "src/BasisClass/@Wavefun/minus.m",
+      "src/BasisClass/@Wavefun/mrdivide.m",
+      "src/BasisClass/@Wavefun/mtimes.m",
+      "src/BasisClass/@Wavefun/ncols.m",
+      "src/BasisClass/@Wavefun/norm.m",
+      "src/BasisClass/@Wavefun/nrows.m",
+      "src/BasisClass/@Wavefun/plus.m",
+      "src/BasisClass/@Wavefun/power.m",
+      "src/BasisClass/@Wavefun/qr.m",
+      "src/BasisClass/@Wavefun/subsasgn.m",
+      "src/BasisClass/@Wavefun/subsref.m",
+      "src/BasisClass/@Wavefun/sum.m",
+      "src/BasisClass/@Wavefun/svd.m",
+      "src/BasisClass/@Wavefun/times.m",
+      "src/BasisClass/@Wavefun/uminus.m",
+      "src/KSeigs/chebyfilt_cpu.m",
+      "src/KSeigs/chebyfilt_gpu.m",
+      "src/KSeigs/davidson2_cpu.m",
+      "src/KSeigs/davidson2_gpu.m",
+      "src/KSeigs/davidson_cpu.m",
+      "src/KSeigs/davidson_gpu.m",
+      "src/KSeigs/davpcg.m",
+      "src/KSeigs/diagbyeigs.m",
+      "src/KSeigs/lanczos_cpu.m",
+      "src/KSeigs/lanczos_gpu.m",
+      "src/KSeigs/lobpcg_cpu.m",
+      "src/KSeigs/lobpcg_gpu.m",
+      "src/KSeigs/omm_cpu.m",
+      "src/KSeigs/omm_gpu.m",
+      "src/KSeigs/ppcg.m",
+      "src/KSeigs/updateX.m",
+      "src/Pseudo/@PpData/PpData.m",
+      "src/Pseudo/@PpData/psp8read.m",
+      "src/Pseudo/@PpData/upfread.m",
+      "src/Pseudo/@PpData/upfreadold.m",
+      "src/Pseudo/@PpVariable/PpVariable.m",
+      "src/Pseudo/getvloc.m",
+      "src/Pseudo/getvnl.m",
+      "src/Pseudo/getvnlcell.m",
+      "src/Pseudo/getvnlsize.m",
+      "src/Pseudo/vloc2g.m",
+      "src/Pseudo/vnl2g.m",
+      "src/SCF_DCM/ACE/kgrid.m",
+      "src/SCF_DCM/Energy/getExxgkk.m",
+      "src/SCF_DCM/Iteraux/corrcharge.m",
+      "src/SCF_DCM/Iteraux/genX0.m",
+      "src/SCF_DCM/Iteraux/genprec.m",
+      "src/SCF_DCM/Iteraux/getgradrho.m",
+      "src/SCF_DCM/Iterinit/iterinit.m",
+      "src/SCF_DCM/Potential/Vxc/VCorrelation/VCorrelation_pw.m",
+      "src/SCF_DCM/Potential/Vxc/VCorrelation/VCorrelation_pz.m",
+      "src/SCF_DCM/Potential/Vxc/VExchange/VExchange_sla.m",
+      "src/SCF_DCM/Potential/Vxc/VGCCorrelation/VGCCorrelation_pbc.m",
+      "src/SCF_DCM/Potential/Vxc/VGCExchange/VGCExchange_pbx.m",
+      "src/SCF_DCM/Potential/Vxc/VGCExchange/VGCExchange_pbxsr.m",
+      "src/SCF_DCM/Potential/Vxc/VxcHSE06.m",
+      "src/SCF_DCM/Potential/Vxc/VxcPBE.m",
+      "src/SCF_DCM/Potential/Vxc/VxcPZ.m",
+      "src/SCF_DCM/Potential/Vxc/getVxc.m",
+      "src/SCF_DCM/Potential/getVhart.m",
+      "src/SCF_DCM/Potential/getVhxc.m",
+      "src/SCF_DCM/Potential/getVtot.m",
+      "src/SCF_DCM/Spin/iterinit/genX0_random.m",
+      "src/SCF_DCM/Spin/iterinit/randy.m",
+      "src/SCF_DCM/Spin/iterinit/rotate_wfc.m",
+      "src/SCF_DCM/Spin/plugin/diag/addnlc.m",
+      "src/SCF_DCM/Spin/plugin/diag/davidson_qe.m",
+      "src/SCF_DCM/Spin/plugin/diag/diag_david.m",
+      "src/SCF_DCM/Spin/plugin/diag/diag_h.m",
+      "src/SCF_DCM/Spin/plugin/diag/subtimes.m",
+      "src/SCF_DCM/Spin/plugin/set_nelup_neldw.m",
+      "src/SCF_DCM/Spin/plugin/sph_ind.m",
+      "src/SCF_DCM/Spin/plugin/spinor.m",
+      "src/SCF_DCM/Spin/plugin/transform_rho.m",
+      "src/SCF_DCM/Spin/potentialcal/VCorrelation/VCorrelation_pw_spin.m",
+      "src/SCF_DCM/Spin/potentialcal/VCorrelation/VCorrelation_pz_spin.m",
+      "src/SCF_DCM/Spin/potentialcal/VCorrelation/pz.m",
+      "src/SCF_DCM/Spin/potentialcal/VCorrelation/pz_polarized.m",
+      "src/SCF_DCM/Spin/potentialcal/VExchange/VExchange_sla_spin.m",
+      "src/SCF_DCM/Spin/potentialcal/VGCCorrelation/VGCCorrelation_pbc_spin.m",
+      "src/SCF_DCM/Spin/potentialcal/VGCExchange/VGCExchange_pbx_spin.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcHSE06_lsda.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcHSE06_nc.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcPBE_lsda.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcPBE_nc.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcPZ_lsda.m",
+      "src/SCF_DCM/Spin/potentialcal/VxcPZ_nc.m",
+      "src/SCF_DCM/Spin/potentialcal/Vxc_gcx.m",
+      "src/SCF_DCM/Spin/potentialcal/graddot.m",
+      "src/SCF_DCM/Spin/potentialcal/rho_compute.m",
+      "src/SCF_DCM/nscf4c.m",
+      "src/Util/Constants/e2Def.m",
+      "src/Util/Constants/meDef.m",
+      "src/Util/SpecialFunctions/bessel.m",
+      "src/Util/SpecialFunctions/ylmr.m",
+      "src/Util/Tools/atom/num2sym.m",
+      "src/Util/Tools/atom/sym2num.m",
+      "src/Util/Tools/dirregexp.m",
+      "src/Util/Tools/doublefactorial.m",
+      "src/Util/Tools/fft3.m",
+      "src/Util/Tools/ifft3.m",
+      "src/Util/Tools/simpson.m",
+      "src/Util/Tools/sumel.m",
+      "src/WI/calculate_band_error.m",
+      "src/WI/calculate_err.m",
+      "src/WI/calculate_scdm_spread.m",
+      "src/WI/collect_eta_summary.m",
+      "src/WI/compare_scdm_bands.m",
+      "src/WI/compare_w90_bands.m",
+      "src/WI/compute_pao_projectability.m",
+      "src/WI/compute_scdm_only_bands.m",
+      "src/WI/enable_soc_blochham_compat.m",
+      "src/WI/has_vitale_band_error.m",
+      "src/WI/plot_scdm_locality.m",
+      "src/WI/read_scdm_uniform_kgrid.m",
+      "src/WI/run_eta_only.m",
+      "src/WI/run_wannier90.m",
+      "src/WI/save_scdm_provenance.m",
+      "src/WI/scdm_m.m",
+      "src/WI/validate_soc_kssolv_runtime.m",
+      "src/WI/validate_vitale_error_runtime.m",
+      "src/WI/wi_scdm_f_inverse.m",
+      "src/WI/wi_scdm_f_params.m",
+      "src/WI/wi_scdm_f_transform.m",
+      "src/WI/write_UNK_files.m",
+      "src/WI/write_input_files.m",
+      "src/WI/write_w90_eig.m",
+      "src/WI/write_w90_mmn.m",
+      "src/WI/write_w90_win.m",
+      "src/WI/write_wannier_cubes.m",
+      "util/kssolvpptype.m",
+      "util/kssolvroot.m"
+    ],
+    "count": 159,
+    "outside_branch_and_matlab": [],
+    "products": [
+      "MATLAB",
+      "Optimization Toolbox",
+      "Parallel Computing Toolbox"
+    ],
+    "gpu_toolbox_conditional": true
+  },
+  "original_preservation": {
+    "files_checked": 753,
+    "changed_files": [],
+    "wi_numerical_files_byte_identical": 27
+  },
+  "not_executed": [
+    "Full material SCF/NSCF and PAO projectability matrices/fitting",
+    "External Wannier90 preprocessing/MLWF",
+    "Entire inherited KSSOLV test collection",
+    "Screened-exchange MEX rebuild or cross-platform validation"
+  ],
+  "release_gates": [
+    "Resolve WI GPL/BSD provenance and applicable license versions/notices",
+    "Review bundled GPL components and screened-exchange binary/source distribution obligations",
+    "Establish PP data redistribution provenance",
+    "Identify upstream public commit where possible; packaged snapshot is fingerprinted",
+    "Complete production material and external Wannier90 validation before paper-reproduction claims"
+  ],
+  "optional_unbuilt_kernels": [
+    {
+      "function": "pbexsrF",
+      "source": "src/SCF_DCM/Potential/Vxc/VGCExchange/pbexsrF.F90",
+      "scope": "Optional upstream screened-exchange path; binary excluded for embedded author path; local rebuild required and untested."
+    }
+  ],
+  "source_package_check": {
+    "status": "PASS",
+    "files": 749,
+    "copied_files_checked": 739,
+    "wi_core_files": 27,
+    "errors": [],
+    "publication_rights_cleared": false,
+    "note": "Structural PASS does not settle source licenses, PP redistribution or complete material/MLWF validation."
+  }
+}

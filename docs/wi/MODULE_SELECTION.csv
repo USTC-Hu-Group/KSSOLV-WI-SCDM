@@ -1,0 +1,36 @@
+original_file,decision,reason,branch_destination
+src/calculate_band_error.m,retained,Core eta/eta_max formulas and independent Fermi-Dirac weighting.,src/WI/calculate_band_error.m
+src/calculate_err.m,retained,"Hartree/reference conversion, explicit band selection and versioned metric recording.",src/WI/calculate_err.m
+src/calculate_scdm_spread.m,retained,Numerical orbital centers and real-space spread estimates.,src/WI/calculate_scdm_spread.m
+src/collect_eta_summary.m,retained,Comparable current-metric summaries for the three-method protocol.,src/WI/collect_eta_summary.m
+src/compare_scdm_bands.m,retained,Path construction and caller used by both material direct-interpolation stages.,src/WI/compare_scdm_bands.m
+src/compare_w90_bands.m,retained,HR interpolation and common-DFT-reference comparison; includes local HR/WS readers.,src/WI/compare_w90_bands.m
+src/compute_pao_projectability.m,retained,"Automatic target dimension and UPF PAO projectabilities, including SOC.",src/WI/compute_pao_projectability.m
+src/compute_scdm_only_bands.m,retained,Both direct projected-Hamiltonian interpolation methods.,src/WI/compute_scdm_only_bands.m
+src/enable_soc_blochham_compat.m,retained,Required pre-class-load compatibility adapter for inspected SOC branch.,src/WI/enable_soc_blochham_compat.m
+src/has_vitale_band_error.m,retained,Current-metric completion checks invoked by example stages and metric recovery.,src/WI/has_vitale_band_error.m
+src/plot_cube_isosurfaces.m,excluded,Rendering-only Cube figure tool; no retained runtime caller.,
+src/plot_cube_isosurfaces_shared_ratio.m,excluded,Figure rendering variant; no retained runtime caller.,
+src/plot_scdm_locality.m,retained,"Computes Hamiltonian-block decay; scientific diagnostic, beyond figure styling.",src/WI/plot_scdm_locality.m
+src/read_qe.m,excluded,Inactive importer also present in external KSSOLV; forces nspin=4 and returns info.ev. Not used by retained workflows; upstream provenance/compatibility unresolved.,
+src/read_scdm_uniform_kgrid.m,retained,Complete uniform/shifted mesh validation and coordinate/index mapping.,src/WI/read_scdm_uniform_kgrid.m
+src/readUNK.m,excluded,Legacy scalar-only reader superseded by the local scalar/spinor readers.,
+src/run_eta_only.m,retained,Existing-checkpoint metric recovery; can dispatch external NSCF if reference absent.,src/WI/run_eta_only.m
+src/run_wannier90.m,retained,"Project-owned preprocessing, overlap generation and external MLWF interface.",src/WI/run_wannier90.m
+src/save_scdm_provenance.m,retained,"Required runtime parameter/source/PP audit records, including failure paths.",src/WI/save_scdm_provenance.m
+src/scdm_m.m,retained,"Active scalar/spinor weighted QRCP, multi-k projection, SVD and orbital construction.",src/WI/scdm_m.m
+src/scdm_orbital_construction.m,excluded,Earlier independent orbital API; current workflows reconstruct through scdm_m.,
+src/validate_soc_kssolv_runtime.m,retained,SOC capability and pseudopotential/runtime checks invoked by SOC stages.,src/WI/validate_soc_kssolv_runtime.m
+src/validate_vitale_error_runtime.m,retained,which-based path guards and analytic metric self-check invoked by launchers.,src/WI/validate_vitale_error_runtime.m
+src/visualize_orbitals.m,excluded,Interactive visualizer; no retained runtime caller.,
+src/visualize_wannier.m,excluded,Interactive visualizer; no retained runtime caller.,
+src/wi_scdm_f_inverse.m,retained,Step-limited Newton inverse called by transformed interpolation.,src/WI/wi_scdm_f_inverse.m
+src/wi_scdm_f_params.m,retained,Default/explicit transformation parameter selection.,src/WI/wi_scdm_f_params.m
+src/wi_scdm_f_transform.m,retained,Energy transform used before projection and inside its inverse.,src/WI/wi_scdm_f_transform.m
+src/write_amn.m,excluded,Older standalone serializer; scdm_m uses its internal spinor-aware writer.,
+src/write_input_files.m,retained,Primary SCDM input/eigenvalue writer and automatic/manual parameter policy.,src/WI/write_input_files.m
+src/write_UNK_files.m,retained,KSSOLV plane-wave to scalar/spinor cell-periodic text export.,src/WI/write_UNK_files.m
+src/write_w90_eig.m,retained,Public eigenvalue conversion/export utility for independent interface use.,src/WI/write_w90_eig.m
+src/write_w90_mmn.m,retained,Required nearest-neighbour overlaps with reciprocal shifts and spinors.,src/WI/write_w90_mmn.m
+src/write_w90_win.m,retained,Required grid/structure/optimization input writer.,src/WI/write_w90_win.m
+src/write_wannier_cubes.m,retained,Called by scdm_m; supplies orbital/spread diagnostics.,src/WI/write_wannier_cubes.m
